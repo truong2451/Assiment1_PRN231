@@ -1,0 +1,15 @@
+D:\Net API\Assignment1_PRN231\Repositories\bin\Debug\net6.0\Repositories.deps.json
+D:\Net API\Assignment1_PRN231\Repositories\bin\Debug\net6.0\Repositories.dll
+D:\Net API\Assignment1_PRN231\Repositories\bin\Debug\net6.0\Repositories.pdb
+D:\Net API\Assignment1_PRN231\Repositories\bin\Debug\net6.0\BusinessObject.dll
+D:\Net API\Assignment1_PRN231\Repositories\bin\Debug\net6.0\BusinessObject.pdb
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.csproj.AssemblyReference.cache
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfoInputs.cache
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.AssemblyInfo.cs
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.csproj.CoreCompileInputs.cache
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.csproj.CopyComplete
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.dll
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\refint\Repositories.dll
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\Repositories.pdb
+D:\Net API\Assignment1_PRN231\Repositories\obj\Debug\net6.0\ref\Repositories.dll

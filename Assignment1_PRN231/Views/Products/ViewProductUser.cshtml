@@ -1,0 +1,53 @@
+﻿@model ProductViewVM
+
+@{
+    ViewData["Title"] = "ListProductOfUser";
+}
+
+<h1>Product</h1>
+
+<div class="row">
+    <form asp-action="ViewProductUser">
+        <input asp-for="Search" class="form-control" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Weight</th>
+            <th>Unit Price</th>
+            <th>Unit in Stock</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    <a asp-action="AddCartInProduct" asp-route-id="@item.ProductId" asp-controller="Carts" class="btn btn-success btn-sm">Add Cart</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,95 @@
+﻿@* 
+@model ReportVM
+
+@{
+    ViewData["Title"] = "Report";
+    
+}
+
+<h1>Report</h1>
+
+@if (ViewBag.ErrMsg != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrMsg</div>
+}
+
+<form asp-action="Report">
+    <input asp-for="@Model.StartDate" type="date" /> -
+    <input asp-for="@Model.EndDate" type="date" />
+    <input asp-for="@Model.ItemPerPage" type="hidden" />
+    <input type="submit" value="Go" />
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>
+                OrderDate
+            </th>
+            <th>
+                Member
+            </th>
+            <th>
+                Num Of Product(s)
+            </th>
+            <th>
+                Price
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Orders)
+        {
+            <tr>
+                <td>@no</td>
+                <td>
+                    @item.OrderDate.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @item.Member.Email
+                </td>
+                <td>
+                    @item.OrderDetails.Count()
+                </td>
+                <td>
+                    @{
+                        decimal price = 0;
+                        foreach (var order in item.OrderDetails)
+                        {
+                            price += order.Quantity * order.UnitPrice * (decimal)(1 - order.Discount / 100);
+                        }
+                    }
+                    @price
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.OrderId" class="btn btn-primary btn-sm">Details</a>
+                </td>
+            </tr>
+            no++;
+        }
+    </tbody>
+</table>
+@if (Model.TotalPage > 1)
+{
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            @for (int i = 1; i <= Model.TotalPage; i++)
+            {
+                <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                    <a class="page-link" asp-action="Report" asp-route-startDate="@Model.StartDate" asp-route-endDate="@Model.EndDate" asp-route-pageIndex="@i" asp-route-itemPerPage="@Model.ItemPerPage">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+}
+<form asp-action="Report" asp-route-startDate="@Model.StartDate.Value.Date" asp-route-endDate="@Model.EndDate.Value.Date" asp-route-pageIndex="@Model.PageIndex">
+    <select asp-for="@Model.ItemPerPage" onchange="this.form.submit()">
+        <option value="1">1</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+    </select>
+</form>
+<p>Total Values: @Model.TotalValues</p>
+ *@

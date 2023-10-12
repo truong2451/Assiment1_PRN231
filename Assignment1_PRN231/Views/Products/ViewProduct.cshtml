@@ -1,0 +1,62 @@
+﻿@model ProductViewVM
+
+@{
+    ViewData["Title"] = "ViewProduct";
+}
+
+<h1>Product</h1>
+
+<p>
+    <a asp-action="CreateProduct">Create New</a>
+</p>
+
+
+<div>
+    <form asp-action="ViewProduct">
+        <input asp-for="Search" class="form-control" />
+        <input type="submit" value="Search" />
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Weight</th>
+            <th>Unit Price</th>
+            <th>Unit in Stock</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProductName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitsInStock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+
+                    <a asp-action="EditProduct" asp-route-id="@item.ProductId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ProductId">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,50 @@
+﻿@model IEnumerable<BusinessObject.Model.Member>
+
+@{
+    ViewData["Title"] = "ViewMember";
+}
+
+<h1>Product</h1>
+
+<p>
+    <a asp-action="CreateMember">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Company Name</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CompanyName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.City)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Country)
+                </td>
+                <td>
+
+                    <a asp-action="EditMember" asp-route-id="@item.MemberId">Edit</a> |
+                    <a asp-action="DeleteMem" asp-route-id="@item.MemberId">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

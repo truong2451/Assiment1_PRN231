@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BusinessObject.Model.Order>
+
+@{
+    ViewData["Title"] = "Order History";
+}
+
+<h3>Order History</h3>
+
+@if (Model.Any())
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>@Html.DisplayNameFor(model => model.OrderId)</th>
+                <th>@Html.DisplayNameFor(model => model.OrderDate)</th>
+                <th>@Html.DisplayNameFor(model => model.RequiredDate)</th>
+                <th>@Html.DisplayNameFor(model => model.ShippedDate)</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int i = 1;
+            }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@i</td>
+                    <td>@item.OrderId</td>
+                    <td>@item.OrderDate.ToShortDateString()</td>
+                    <td>@item.RequiredDate?.ToShortDateString()</td>
+                    <td>@item.ShippedDate?.ToShortDateString()</td>
+                    <td>
+                       @*  <a asp-action="" asp-route-id="@item.OrderId" class="btn btn-info btn-sm">Details</a> *@
+                        <a href="#" class="btn btn-info btn-sm">Details</a>
+                    </td>
+                </tr>
+                i++;
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No orders found.</p>
+}
