@@ -21,14 +21,6 @@ namespace Assignment1_API
             
             CreateMap<Member, MemberUpdateVM>();
             CreateMap<MemberUpdateVM, Member>();
-
-           
-            CreateMap<Order, OrderVM>();
-            CreateMap<OrderVM, Order>(); 
-
-            CreateMap<OrderDetail, OrderDetailVM>();
-            CreateMap<OrderDetailVM, OrderDetail>();
-
         }
     }
 }

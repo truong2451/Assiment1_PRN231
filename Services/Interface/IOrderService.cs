@@ -11,7 +11,7 @@ namespace Services.Interface
     {
         Task<Order> Get(int id);
         IEnumerable<Order> GetAllOrders();
-        Task<bool> Add(Order order, List<OrderDetail> orderDetails);
+        Task<bool> Add(int memId, List<OrderDetail> orderDetails);
         Task<bool> Update(Order order);
         Task<bool> Delete(int id);
     }

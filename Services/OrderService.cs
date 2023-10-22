@@ -22,15 +22,20 @@ namespace Services
             this.productRepository = productRepository;
         }
 
-        public async Task<bool> Add(Order order, List<OrderDetail> orderDetails)
+        public async Task<bool> Add(int memId, List<OrderDetail> orderDetails)
         {
             try
             {
-                order.OrderDetails = new List<OrderDetail>();
+                var order = new Order();
 
+                order.MemberId = memId;
                 order.OrderDate = DateTime.Now;
                 order.RequiredDate = DateTime.Now;
                 order.ShippedDate = DateTime.Now;
+                order.Freight = 0;
+
+                order.OrderDetails = new List<OrderDetail>();
+
                 var addOrder = await repository.Add(order);
                 var newOrder = repository.GetAll().LastOrDefault();
                 var addOrderDetail = false;

@@ -14,11 +14,9 @@ namespace Assignment1_API.Controllers
     public class OrderController : ControllerBase
     {
         private readonly IOrderService orderService;
-        private readonly IMapper mapper;
 
-        public OrderController(IOrderService orderService, IMapper mapper)
+        public OrderController(IOrderService orderService)
         {
-            this.mapper = mapper;
             this.orderService = orderService;
         }
 
@@ -59,7 +57,8 @@ namespace Assignment1_API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Payment(List<OrderDetail> model)
+        public async Task<IActionResult> Payment(List<OrderDetail> list)
+
         {
             try
             {
@@ -82,14 +81,10 @@ namespace Assignment1_API.Controllers
                     });
                 }
 
-                var memId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
-
-                var orderMap = mapper.Map<Order>(model);
-                orderMap.MemberId = int.Parse(memId);
                 var orderDetails = new List<OrderDetail>();
-                if(model != null)
+                if (list != null)
                 {
-                    foreach (var item in model)
+                    foreach (var item in list)
                     {
                         orderDetails.Add(new OrderDetail
                         {
@@ -100,7 +95,10 @@ namespace Assignment1_API.Controllers
                         });
                     }
                 }
-                var check = await orderService.Add(orderMap, orderDetails);
+
+                var memId = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+                var check = await orderService.Add(int.Parse(memId), orderDetails);
+
                 return check ? Ok(new
                 {
                     Message = "Add Success"
@@ -118,5 +116,6 @@ namespace Assignment1_API.Controllers
                 });
             }
         }
+
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Net API\\Assignment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj": {}
+    "D:\\Git Repository\\Assiment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj": {}
   },
   "projects": {
-    "D:\\Net API\\Assignment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj": {
+    "D:\\Git Repository\\Assiment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Net API\\Assignment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj",
+        "projectUniqueName": "D:\\Git Repository\\Assiment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj",
         "projectName": "Assignment1_PRN231",
-        "projectPath": "D:\\Net API\\Assignment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj",
+        "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\Assignment1_PRN231\\Assignment1_PRN231.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Net API\\Assignment1_PRN231\\Assignment1_PRN231\\obj\\",
+        "outputPath": "D:\\Git Repository\\Assiment1_PRN231\\Assignment1_PRN231\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj"
+              "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\Net API\\Assignment1_PRN231\\Repositories\\Repositories.csproj": {
-                "projectPath": "D:\\Net API\\Assignment1_PRN231\\Repositories\\Repositories.csproj"
+              "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\Repositories.csproj": {
+                "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -80,14 +80,14 @@
         }
       }
     },
-    "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
+    "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj",
+        "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\obj\\",
+        "outputPath": "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,14 +166,14 @@
         }
       }
     },
-    "D:\\Net API\\Assignment1_PRN231\\Repositories\\Repositories.csproj": {
+    "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Net API\\Assignment1_PRN231\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "D:\\Net API\\Assignment1_PRN231\\Repositories\\Repositories.csproj",
+        "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Net API\\Assignment1_PRN231\\Repositories\\obj\\",
+        "outputPath": "D:\\Git Repository\\Assiment1_PRN231\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -195,8 +195,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\Net API\\Assignment1_PRN231\\BusinessObject\\BusinessObject.csproj"
+              "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "D:\\Git Repository\\Assiment1_PRN231\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
